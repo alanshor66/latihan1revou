@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir dan Tabel Pendaftaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        nav{
+                border: 2px solid rgb(17, 87, 38);
+                display: flex;
+                justify-content: flex-end;
+                color: #ddd;
+            }
+            nav.container > div{
+                padding: 10px;
+                text-align: center;
+                font-size: 14sp;
+                color:#ffffff;
+                border: 2px solid;
+                background-color: rgb(8, 151, 103);
+            }
+            .logo {
+                margin-right:auto ;
+            }
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-container {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .table-container {
+            flex: 1;
+        }
+        form {
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        label {
+            display:inline-block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .action-buttons button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .action-buttons .edit {
+            background-color: #ffc107;
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <img class="logo" src="https://akcdn.detik.net.id/community/media/visual/2019/08/02/1bcc96d4-af26-4f09-ab0a-249d10648314_169.jpeg?w=700&q=90" alt="Sumber Detik Jabar" width="40" height="40"/>
+            <div class="home" ><a href="#">Home</div></a>
+            <div class="search">Search</div>
+            <div class="logout">Logout</div>
+        </nav>                  
+    </header>
+
+    <h1 style="text-align: center;">Latihan 1</h1>
+
+    <div class="container">
+        <div class="form-container">
+            <h2>Ini Formulir</h2>
+            <form id="registrationForm">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" name="nama" required>
+
+                <label for="alamat">Alamat:</label>
+                <textarea id="alamat" name="alamat" rows="4" required></textarea>
+
+                <label for="nomor_hp">Nomor HP:</label>
+                <input type="tel" id="nomor_hp" name="nomor_hp" pattern="[0-9]{10,13}" required>
+
+                <input type="submit" value="Kirim">
+            </form>
+        </div>
+        <div class="table-container">
+            <h2>Ini Tabel</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nomor</th>
+                        <th>Nama</th>
+                        <th>Alamat</th>
+                        <th>Nomor HP</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Anshori</td>
+                        <td>Rantauprapat</td>
+                        <td>081234567890</td>
+                        <td class="action-buttons">
+                            <button class="edit">Edit</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Budi Ari</td>
+                        <td>Medan</td>
+                        <td>089876543210</td>
+                        <td class="action-buttons">
+                            <button class="edit">Edit</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
