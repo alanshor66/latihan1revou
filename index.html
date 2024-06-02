@@ -1,198 +1,114 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Latihan Form dan Tabel beserta Navbar</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #284f88;
-            padding: 10px 20px;
-            color: white;
-        }
-        .navbar .logo {
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-        .navbar .menu {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-        .navbar .menu li {
-            margin-left: 20px;
-        }
-        .navbar .menu li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1em;
-            transition: color 0.3s;
-        }
-        .navbar .menu li a:hover {
-            color: #ddd;
-        }
-        
-        .container {
-            display: flex;
-            justify-content: space-between;
-        }
-        .form-container {
-            flex: 1;
-            margin-right: 20px;
-        }
-        .table-container {
-            flex: 1;
-        }
-        form {
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-        }
-        label {
-            display:block;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-        input[type="text"],
-        input[type="tel"],
-        textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 12px;
-            border: 1px solid #ccc;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .action-buttons {
-            display: flex;
-            gap: 10px;
-        }
-        .action-buttons button {
-            padding: 5px 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .action-buttons .edit {
-            background-color: #ffc107;
-            color: white;
-        }
-        .footer {
-            background-color: #f3efef;
-            color: rgb(14, 13, 13);
-            text-align: center;
-            padding: 1px 0;
-            position: relative;
-            bottom: 0px;
-            width: 100%;
-        }
-    </style>
+    <title>Portofolio Anshori</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">Logo</div>
-            <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Logout</a></li>
-            </ul>
-        </nav>  
-    </header>
+    
+    <nav>
+        <div class="logo-icon">
+            
+        </div>
+        <section class="nav-section">
+            <a href="#home" class="nav-item">Home</a>
+            <a href="#facilities" class="nav-item">Our Facilities</a>
+            <a href="#message-us" class="nav-item">Message Us</a>
+        </section>
+        
+    </nav>
+    
+    
+<section class="section">
+    <!-- Home -->
+    <section class="home" id="home">
+        <header>
+            <h2>Hi, Selamat Datang di Website Anshori</h2>
+        </header>
 
-    <main>
-        <h1 style="text-align: center;">Membuat Form, Tabel dan Navbar</h1>
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut corrupti asperiores voluptatem, exercitationem, ipsam sapiente sunt vitae placeat quia a dolorem veritatis magni eaque dolores mollitia non corporis aspernatur debitis?
+            </p>
 
-        <div class="container">
-            <div class="form-container">
-                <h2>Ini Formulir</h2>
-                <form id="registrationForm">
-                    <label for="nama">Nama:</label>
-                    <input type="text" id="nama" name="nama" required>
+            <div class="banner-container">
+            </div>
+        </article>
+    </section>
+    <hr>
 
-                    <label for="alamat">Alamat:</label>
-                    <textarea id="alamat" name="alamat" rows="4" required></textarea>
+    <!-- Our Facilities -->
+    <section class="facilities" id="facilities">
+        <header>
+            <h2>Facilities</h2>
+        </header>
+        <article class="facility-list">
+            <div>
+                <div class="container-facilities"></div>
+                <h5>Free Refill</h5>
+            </div>
+            <div>
+                <div class="container-facilities"></div>
+                <h5>Bonus</h5>
+            </div>
+            <div>
+                <div class="container-facilities"></div>
+                <h5>Murah</h5>
+            </div>
+            
+        </article>
+    </section>
+    <hr>
 
-                    <label for="nomor_hp">Nomor HP:</label>
-                    <input type="tel" id="nomor_hp" name="nomor_hp" pattern="[0-9]{10,13}" required>
+    <!-- Message Us -->
+    <section class="message-us" id="message-us">
+        <header>
+            <h2>Message Us</h2>
+        </header>
 
-                    <input type="submit" value="Kirim">
+        <section class="message-us-section">
+            <!-- form -->
+            <section class="form-container">
+                <form id="formulir">
+                    <label for="nama" class="">Nama :</label>
+                    <input type="text" id="nama" name="nama"> <br>
+
+                    <label for="tglLahir" class="">Tanggal Lahir :</label>
+                    <input type="date" id="tglLahir" name="tglLahir"> <br>
+
+                    <label>Jenis Kelamin:</label><br>
+                    <input type="radio" id="lakilaki" name="jenisKelamin" value="lakilaki" required>
+                    <label for="lakilaki">Laki-laki</label><br>
+                    <input type="radio" id="perempuan" name="jenisKelamin" value="perempuan">
+                    <label for="perempuan">Perempuan</label><br>
+                    
+                    <label for="pesan">Pesan :</label>
+                    <textarea id="pesan" name="pesan" rows="4" required></textarea> <br>
+                    
+                    <button type="submit" id="submit">Kirim</button>
+                    
                 </form>
-            </div>
-            <div class="table-container">
-                <h2>Ini Tabel</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Nomor</th>
-                            <th>Nama</th>
-                            <th>Alamat</th>
-                            <th>Nomor HP</th>
-                            <th>Aksi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Anshori</td>
-                            <td>Rantauprapat</td>
-                            <td>081234567890</td>
-                            <td class="action-buttons">
-                                <button class="edit">Edit</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Budi Ari</td>
-                            <td>Medan</td>
-                            <td>089876543210</td>
-                            <td class="action-buttons">
-                                <button class="edit">Edit</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-    </div>
+               
+            </section>
 
-    <footer>
-        <footer class="footer">
-            <p>&copy; 2024 Anshori. All Rights Reserved.</p>
-        </footer>
-    </footer>
+            <!-- Result -->
+            <section class="result-container">
+                <div class="form-result">
+                    <textarea id="result" rows="15" cols="20" readonly></textarea>
+                </div>
+            </section>
+
+        </section>
+    </section>
+</section>
+   
+<footer class="footer">
+    <p>&copy; 2024 Anshori. All Rights Reserved.</p>
+</footer>
+    
+<script src="js/scripts.js">/script>
+</script>
 
 </body>
 </html>
